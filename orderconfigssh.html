@@ -111,8 +111,8 @@
             <label for="name">Username</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Password</label>
-            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="email" required>
 
             <label for="phone">Durasi</label>
             <input type="tel" id="phone" name="phone" required>
@@ -141,7 +141,7 @@
                 <option value="Kesehatan">Http Injector</option>
                 <option value="Pendidikan">Http Custom</option>                
                 <option value="Teknologi">Dark Tunnel</option>
-                <option value="Olahraga">Isi Sendiri</option>
+                <option value="Isi Sendiri">Isi Sendiri</option>
 
             </select>
 
@@ -157,13 +157,13 @@
 
         document.getElementById('submit-button').addEventListener('click', function() {
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            const email = document.getElementById('password').value;
             const phone = document.getElementById('phone').value;
             const interest1 = document.getElementById('interest1').value;
             const interest2 = document.getElementById('interest2').value;
             const interest3 = document.getElementById('interest3').value;
 
-            const message = `Berikut orderan saya :\n\nUsername : ${name}\nPassword : ${email}\nDurasi : ${phone}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
+            const message = `Berikut orderan saya :\n\nUsername : ${name}\nPassword : ${password}\nDurasi : ${phone}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
             const whatsappLink = `https://wa.me/6282119690755?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappLink, '_blank');
