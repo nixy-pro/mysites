@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9615914347960451"
@@ -82,7 +82,7 @@
             <article class="entry entry-single"
 	
               <div class="entry-img">
-                <img src="nixystore/nixystore.png" alt="" class="img-fluid">
+                <img src="nixystore.png" alt="" class="img-fluid">
               </div>
 
     
@@ -91,55 +91,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Buttons</title>
+  <title>Daftar Produk</title>
   <style>
-    .btn-container {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
       text-align: center;
+    }
+
+    .produk-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .produk-row {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+    }
+
+    .produk-item {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      flex: 0 0 auto;
+      width: 200px;
+    }
+
+    .produk-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .produk-item img {
+      width: 100%;
+      border-radius: 5px;
     }
 
     .btn {
-      background-color: #01296F;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      text-align: center;
       display: inline-block;
-      font-size: 16px;
-      margin: 10px;
-      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #004e9a;
-      transform: translateY(-2px);
-    }
-
-    .btn:active {
-      background-color: orange;
-      transform: translateY(1px);
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-	<hr>
-  <div class="btn-container">
-  	<button class="btn" onclick="window.location.href='https://www.example.com'">SSH ONLY</button>
-    <button class="btn" onclick="window.location.href='https://www.example.com'">VLESS ONLY</button>
-    <button class="btn" onclick="window.location.href='https://www.example.com'">VMESS ONLY</button>
-    <button class="btn" onclick="window.location.href='https://www.example.com'">TROJAN ONLY</button>
-  </div>
-  <p>
-  <hr>
-  <div class="btn-container">
-    <button class="btn" onclick="window.location.href='https://www.nixyproject.biz.id/orderconfigssh'">SSH + CONFIG</button>
-    <button class="btn" onclick="window.location.href='https://www.nixyproject.biz.id/orderconfigvless'">VLESS + CONFIG</button>
-    <button class="btn" onclick="window.location.href='https://www.nixyproject.biz.id/orderconfigvmess'">VMESS + CONFIG</button>
-    <button class="btn" onclick="window.location.href='https://www.nixyproject.biz.id/orderconfigtrojan'">TROJAN + CONFIG</button>
-  </div>
-  <p>
-  <hr>
+  <h1>Daftar Produk</h1>
+  <ul class="produk-list">
+    <div class="produk-row">
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 1">
+        <h2>SSH</h2>
+        <p>Ditambah Config</p>
+        <a href="https://www.nixyproject.biz.id/orderconfigssh" class="btn">BELI</a>
+      </li>
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 2">
+        <h2>VMESS</h2>
+        <p>Ditambah Config</p>
+        <a href="https://www.nixyproject.biz.id/orderconfigvmess" class="btn">BELI</a>
+      </li>
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 3">
+        <h2>VLESS</h2>
+        <p>Ditambah Config</p>
+        <a href="https://www.nixyproject.biz.id/orderconfigvmess" class="btn">BELI</a>
+      </li>
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 4">
+        <h2>TROJAN</h2>
+        <p>Ditambah Config</p>
+        <a href="https://www.nixyproject.biz.id/orderconfigtrojan" class="btn">BELI</a>
+      </li>
+    </div>
+    <div class="produk-row">
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 5">
+        <h2>SSH</h2>
+        <p>Tanpa Config</p>
+        <a href="https://www.nixyproject.biz.id/sshonly" class="btn">BELI</a>
+      </li>
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 6">
+        <h2>VMESS</h2>
+        <p>Tanpa Config</p>
+        <a href="https://www.nixyproject.biz.id/vmessonly" class="btn">BELI</a>
+      </li>
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 7">
+        <h2>VLESS</h2>
+        <p>Tanpa Config</p>
+        <a href="https://www.nixyproject.biz.id/vlessonly" class="btn">BELI</a>
+      </li>
+      <li class="produk-item">
+        <img src="nixystore/nixystore.png" alt="Produk 8">
+        <h2>TROJAN</h2>
+        <p>Tanpa Config</p>
+        <a href="https://www.nixyproject.biz.id/trojanonly" class="btn">BELI</a>
+      </li>
+    </div>
+  </ul>
 </body>
 </html>
             
