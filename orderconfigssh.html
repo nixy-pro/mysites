@@ -109,38 +109,37 @@
         <h2>CONFIG SSH VPN</h2>
         <form id="registration-form">
             <label for="name">Username</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="username" name="username" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="email" required>
+            <label for="name">Password</label>
+            <input type="text" id="password" name="password" required>
 
             <label for="phone">Durasi</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="durasi" name="durasi" required>
 
             <label for="interest1">Server</label>
             <select id="interest1" name="interest1">
-                <option value="Pendidikan">Indonesia</option>
-                <option value="Kesehatan">Singapore</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Singapore">Singapore</option>
                
             </select>
 
             <label for="interest2">Config</label>
             <select id="interest2" name="interest2">
-                <option value="Pendidikan">Telkomsel Ruangguru</option>
-                <option value="Kesehatan">Telkomsel Ilmupedia</option>
-                <option value="Teknologi">Indosat Edukasi</option>
-                <option value="Olahraga">Axis Edukasi</option>
-                <option value="Seni">Xl Edukasi</option>
-                <option value="Olahraga">Xl Video</option>
+                <option value="Telkomsel Ruangguru">Telkomsel Ruangguru</option>
+                <option value="Telkomsel Ilmupedia">Telkomsel Ilmupedia</option>
+                <option value="Indosat Edukasi">Indosat Edukasi</option>
+                <option value="Axis Edukasi">Axis Edukasi</option>
+                <option value="Xl Edukasi">Xl Edukasi</option>
+                <option value="Xl Video">Xl Video</option>
                 
             </select>
             
             <label for="interest3">Aplikasi</label>
-            <select id="interest3" name="interest3">
-            	
-                <option value="Kesehatan">Http Injector</option>
-                <option value="Pendidikan">Http Custom</option>                
-                <option value="Teknologi">Dark Tunnel</option>
+            <select id="interest3" name="interest3">            	
+                <option value="Http Injector">Http Injector</option>
+                <option value="Http Custom">Http Custom</option>                
+                <option value="Dark Tunnel">Dark Tunnel</option>
                 <option value="Isi Sendiri">Isi Sendiri</option>
 
             </select>
@@ -156,14 +155,14 @@
         });
 
         document.getElementById('submit-button').addEventListener('click', function() {
-            const name = document.getElementById('name').value;
+            const name = document.getElementById('username').value;
             const email = document.getElementById('password').value;
-            const phone = document.getElementById('phone').value;
+            const phone = document.getElementById('durasi').value;
             const interest1 = document.getElementById('interest1').value;
             const interest2 = document.getElementById('interest2').value;
             const interest3 = document.getElementById('interest3').value;
 
-            const message = `Berikut orderan saya :\n\nUsername : ${name}\nPassword : ${password}\nDurasi : ${phone}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
+            const message = `Berikut orderan saya :\n\nUsername : ${username}\nPassword : ${password}\nDurasi : ${durasi}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
             const whatsappLink = `https://wa.me/6282119690755?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappLink, '_blank');
@@ -211,4 +210,3 @@
 
 </html>
 
-  
