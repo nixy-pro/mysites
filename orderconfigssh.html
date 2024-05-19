@@ -106,7 +106,7 @@
 </head>
 <body>
     <div class="form-container">
-        <h2>ORDER CONFIG SSH</h2>
+        <h2>CONFIG SSH VPN</h2>
         <form id="registration-form">
             <label for="name">Username</label>
             <input type="text" id="name" name="name" required>
@@ -161,6 +161,7 @@
             const phone = document.getElementById('phone').value;
             const interest1 = document.getElementById('interest1').value;
             const interest2 = document.getElementById('interest2').value;
+            const interest3 = document.getElementById('interest3').value;
 
             const message = `Berikut orderan saya :\n\nUsername : ${name}\nPassword : ${email}\nDurasi : ${phone}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
             const whatsappLink = `https://wa.me/6282119690755?text=${encodeURIComponent(message)}`;
@@ -210,3 +211,4 @@
 
 </html>
 
+  
