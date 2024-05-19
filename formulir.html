@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            animation: slideIn 0.5s ease forwards;
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="tel"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulir Pendaftaran</h2>
+        <form id="registration-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Nomor Telepon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="interest1">Minat Pertama:</label>
+            <select id="interest1" name="interest1">
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Kesehatan">Kesehatan</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Seni">Seni</option>
+            </select>
+
+            <label for="interest2">Minat Kedua:</label>
+            <select id="interest2" name="interest2">
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Kesehatan">Kesehatan</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Seni">Seni</option>
+            </select>
+
+            <button type="button" id="submit-button">Daftar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const interest1 = document.getElementById('interest1').value;
+            const interest2 = document.getElementById('interest2').value;
+
+            const message = `Halo, saya ingin mendaftar. Berikut detail saya:\n\nNama: ${name}\nEmail: ${email}\nNomor Telepon: ${phone}\nMinat Pertama: ${interest1}\nMinat Kedua: ${interest2}`;
+            const whatsappLink = `https://wa.me/<nomor_telepon>?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappLink, '_blank');
+
+            // Reset form after submission (optional)
+            document.getElementById('registration-form').reset();
+        });
+    </script>
+</body>
+</html>
