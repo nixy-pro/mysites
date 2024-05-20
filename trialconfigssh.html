@@ -108,15 +108,7 @@
     <div class="form-container">
         <h2>TRIAL CONFIG SSH</h2>
         <form id="registration-form">
-            <label for="name">Username</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="name">Password</label>
-            <input type="text" id="password" name="password" required>
-
-            <label for="phone">Durasi</label>
-            <input type="tel" id="durasi" name="durasi" required>
-
+            
             <label for="interest1">Server</label>
             <select id="interest1" name="interest1">
                 <option value="Indonesia">Indonesia</option>
@@ -144,7 +136,7 @@
 
             </select>
 
-            <button type="button" id="submit-button">Beli</button>
+            <button type="button" id="submit-button">Trial</button>
         </form>
     </div>
 
@@ -155,14 +147,11 @@
         });
 
         document.getElementById('submit-button').addEventListener('click', function() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const durasi= document.getElementById('durasi').value;
             const interest1 = document.getElementById('interest1').value;
             const interest2 = document.getElementById('interest2').value;
             const interest3 = document.getElementById('interest3').value;
 
-            const message = `*Trial config mode ssh :*\n\nUsername : ${username}\nPassword : ${password}\nDurasi : ${durasi}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
+            const message = `*Trial config mode ssh :*\n\nConfig : ${interest2}\nAplikasi : ${interest3}`;
             const whatsappLink = `https://wa.me/6282119690755?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappLink, '_blank');
