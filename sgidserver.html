@@ -84,132 +84,221 @@
               <div class="entry-img">
                 <img src="nixystore/nixystore.png" alt="" class="img-fluid">
               </div>
+              <hr>
+            <h3><center>DITAMBAH CONFIG</center></h3>
+            <hr>
 
     
     <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daftar Produk</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    h1 {
-      text-align: center;
-    }
+        .product-catalog {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
 
-    .produk-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        .product-item {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .produk-row {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 20px;
-    }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
 
-    .produk-item {
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      flex: 0 0 auto;
-      width: 200px;
-    }
+        .product-item h2 {
+            font-size: 1em;
+            margin: 10px 0;
+        }
 
-    .produk-item:hover {
-      transform: translateY(-5px);
-    }
+        .product-item .price {
+            color: #1dbf73;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
 
-    .produk-item img {
-      width: 100%;
-      border-radius: 5px;
-    }
+        .product-item a {
+            background-color: #1dbf73;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 0.9em;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
+        .product-item a:hover {
+            background-color: #17a564;
+        }
 
-    .btn:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        .product-item a:active {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 <body>
-  <h1>Daftar Produk</h1>
-  <ul class="produk-list">
-    <div class="produk-row">
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 1">
-        <h2>SSH</h2>
-        <p>Ditambah Config</p>
-        <a href="https://www.nixyproject.biz.id/orderconfigssh" class="btn">BELI</a>
-      </li>
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 2">
-        <h2>VMESS</h2>
-        <p>Ditambah Config</p>
-        <a href="https://www.nixyproject.biz.id/orderconfigvmess" class="btn">BELI</a>
-      </li>
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 3">
-        <h2>VLESS</h2>
-        <p>Ditambah Config</p>
-        <a href="https://www.nixyproject.biz.id/orderconfigvmess" class="btn">BELI</a>
-      </li>
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 4">
-        <h2>TROJAN</h2>
-        <p>Ditambah Config</p>
-        <a href="https://www.nixyproject.biz.id/orderconfigtrojan" class="btn">BELI</a>
-      </li>
-    </div>
-    <div class="produk-row">
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 5">
-        <h2>SSH</h2>
-        <p>Tanpa Config</p>
-        <a href="https://www.nixyproject.biz.id/sshonly" class="btn">BELI</a>
-      </li>
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 6">
-        <h2>VMESS</h2>
-        <p>Tanpa Config</p>
-        <a href="https://www.nixyproject.biz.id/vmessonly" class="btn">BELI</a>
-      </li>
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 7">
-        <h2>VLESS</h2>
-        <p>Tanpa Config</p>
-        <a href="https://www.nixyproject.biz.id/vlessonly" class="btn">BELI</a>
-      </li>
-      <li class="produk-item">
-        <img src="nixystore/nixystore.png" alt="Produk 8">
-        <h2>TROJAN</h2>
-        <p>Tanpa Config</p>
-        <a href="https://www.nixyproject.biz.id/trojanonly" class="btn">BELI</a>
-      </li>
-    </div>
-  </ul>
+    <main>
+        <div class="product-catalog">
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 1">
+                <b>SSH OVPN</b>
+                <p class="price">PLUS CONFIG</p>
+                <a href="https://www.nixyproject.biz.id/orderconfigssh">BELI</a>
+            </div>
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 2">
+                <b>XRAY VMESS</b>
+                <p class="price">PLUS CONFIG</p>
+                <a href="https://www.nixyproject.biz.id/orderconfigvmess">BELI</a>
+            </div>
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 3">
+                <b>XRAY VLESS</b>
+                <p class="price">PLUS CONFIG</p>
+                <a href="https://www.nixyproject.biz.id/orderconfigvless">BELI</a>
+            </div>
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 4">
+                <b>XRAY TROJAN</b>
+                <p class="price">PLUS CONFIG</p>
+                <a href="https://www.nixyproject.biz.id/orderconfigtrojan">Beli</a>
+            </div>                        
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<hr>
+            <h3><center>TANPA CONFIG</center></h3>
+            <hr>
+
+    
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-catalog {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-item h2 {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            color: #1dbf73;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .product-item a {
+            background-color: #1dbf73;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 0.9em;
+        }
+
+        .product-item a:hover {
+            background-color: #17a564;
+        }
+
+        .product-item a:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="product-catalog">
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 1">
+                <b>SSH OVPN</b>
+                <p class="price">TANPA CONFIG</p>
+                <a href="https://link-produk-1.com">BELI</a>
+            </div>
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 2">
+                <b>XRAY VMESS</b>
+                <p class="price">TANPA CONFIG</p>
+                <a href="https://link-produk-2.com">BELI</a>
+            </div>
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 3">
+                <b>XRAY VLESS</b>
+                <p class="price">TANPA CONFIG</p>
+                <a href="https://link-produk-3.com">BELI</a>
+            </div>
+            <div class="product-item">
+                <img src="vpn/vpn.jpg" alt="Produk 4">
+                <b>XRAY TROJAN</b>
+                <p class="price">TANPA CONFIG</p>
+                <a href="https://link-produk-4.com">Beli</a>
+            </div>                        
+            </div>
+        </div>
+    </main>
 </body>
 </html>
             
@@ -222,10 +311,6 @@
                 
 
 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-        <br><p style="text-align:center">
-        <a href="https://www.nixyproject.biz.id">NIXY Project</a>
-    </div>
-  </footer>
 <!-- End Footer -->
 <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
