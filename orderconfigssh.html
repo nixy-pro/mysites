@@ -113,27 +113,26 @@
 
             <label for="name">Password</label>
             <input type="text" id="password" name="password" required>
-            	
-            </select>
 
-           <label for="interest0">Durasi</label>
-            <select id="interest0" name="interest0">
-                <option value="Indonesia">Rp5000 - 15 Hari</option>
-                <option value="Singapore">Rp10.000 - 30 Hari</option>
-                <option value="Singapore">Rp20.000 - 60 Hari</option>
-                <option value="Singapore">Rp30.000 - 90 Hari</option>
-                
-            </select>
-
-           <label for="interest1">Server</label>
+            <label for="interest1">Durasi</label>
             <select id="interest1" name="interest1">
-                <option value="Indonesia">Indonesia</option>
-                <option value="Singapore">Singapore</option>            
+            	<option value="ghh">Pilih =~</option>
+                <option value="gh">hhh</option>
+                <option value="ggh">hh</option>
                
             </select>
 
-            <label for="interest2">Config</label>
+            <label for="interest2">Server</label>
             <select id="interest2" name="interest2">
+            	<option value="Pilih">Pilih =~</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Singapore">Singapore</option>
+               
+            </select>
+
+            <label for="interest3">Config</label>
+            <select id="interest3" name="interest3">
+            	<option value="Pilih">Pilih =~</option>
                 <option value="Telkomsel Ruangguru">Telkomsel Ruangguru</option>
                 <option value="Telkomsel Ilmupedia">Telkomsel Ilmupedia</option>
                 <option value="Indosat Edukasi">Indosat Edukasi</option>
@@ -143,8 +142,9 @@
                 
             </select>
             
-            <label for="interest3">Aplikasi</label>
-            <select id="interest3" name="interest3">            	
+            <label for="interest4">Aplikasi</label>
+            <select id="interest4" name="interest4">
+            	<option value="Pilih">Pilih =~</option>
                 <option value="Http Injector">Http Injector</option>
                 <option value="Http Custom">Http Custom</option>                
                 <option value="Dark Tunnel">Dark Tunnel</option>
@@ -164,14 +164,13 @@
 
         document.getElementById('submit-button').addEventListener('click', function() {
             const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const durasi= document.getElementById('durasi').value;
-            const interest0 = document.getElementById('interest0').value;
+            const password = document.getElementById('password').value;            
             const interest1 = document.getElementById('interest1').value;
             const interest2 = document.getElementById('interest2').value;
             const interest3 = document.getElementById('interest3').value;
+            const interest4 = document.getElementById('interest4').value;
 
-            const message = `*Order config mode ssh :*\n\nUsername : ${username}\nPassword : ${password}\nDurasi : ${interest0}\nServer : ${interest1}\nConfig : ${interest2}\nAplikasi : ${interest3}`;
+            const message = `*Order config mode ssh :*\n\nUsername : ${username}\nPassword : ${password}\nDurasi : ${interest1}\nServer : ${interest2}\nConfig : ${interest3}\nAplikasi : ${interest4}`;
             const whatsappLink = `https://wa.me/6282119690755?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappLink, '_blank');
