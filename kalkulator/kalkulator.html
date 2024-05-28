@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!doctype html>
+
+<html lang="en"> 
+
+ <head> 
+
+  <meta charset="UTF-8"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <title>Calculator Pro</title> 
+
+  <link rel="stylesheet" href="index.css"> 
+
+ </head> 
+
+ <body> 
+
+  <div class="container"> 
+
+   <div class="calculator"> <button id="time-display"><span id="datetime"></span></button> <button id="set-keys">M</button> <button id="set-keys">S</button> 
+
+    <div> 
+
+     <input type="button" name="display" id="out"> 
+
+    </div> 
+
+    <div class="menu"> 
+
+     <input type="button" value="*" onclick="out.value +='*'"> 
+
+     <input type="button" value="DEL" id="delete" onclick="out.value=''"> 
+
+     <input type="button" value="AC" id="all-clear" onclick="out.value=''"> 
+
+     <input type="button" value="ON" onclick="alert('I`M ALREADY ACTIVE')"> 
+
+    </div> 
+
+    <div> 
+
+     <input type="button" value="7" id="seven" name="7" onclick="out.value +='7'"> 
+
+     <input type="button" value="8" id="eight" onclick="out.value +='8'"> 
+
+     <input type="button" value="9" id="nine" onclick="out.value +='9'"> 
+
+     <input type="button" value="/" onclick="out.value +='/'"> 
+
+    </div> 
+
+    <div> 
+
+     <input type="button" value="4" id="four" onclick="out.value +='4'"> 
+
+     <input type="button" value="5" id="five" onclick="out.value +='5'"> 
+
+     <input type="button" value="6" id="six" onclick="out.value +='6'"> 
+
+     <input type="button" value="+" onclick="out.value +='+'"> 
+
+    </div> 
+
+    <div> 
+
+     <input type="button" value="1" id="one" onclick="out.value +='1'"> 
+
+     <input type="button" value="2" id="two" onclick="out.value +='2'"> 
+
+     <input type="button" value="3" id="three" onclick="out.value +='3'"> 
+
+     <input type="button" value="-" onclick="out.value +='-'"> 
+
+    </div> 
+
+    <div> 
+
+     <input type="button" value="0" id="zero" onclick="out.value +='0'"> 
+
+     <input type="button" value="." id="point" onclick="out.value +='.'"> 
+
+     <input type="button" value="=" id="equal" onclick="out.value=eval(out.value)"> 
+
+    </div> 
+
+    <script>
+
+      // create a function to update the date and time
+
+      function updateDateTime() {
+
+        // create a new `Date` object
+
+        const now = new Date();
+
+        // get the current date and time as a string
+
+        const currentDateTime = now.toLocaleString();
+
+        // update the `textContent` property of the `span` element with the `id` of `datetime`
+
+        document.querySelector('#datetime').textContent = currentDateTime;
+
+      }
+
+      // call the `updateDateTime` function every second
+
+      setInterval(updateDateTime, 1000);
+
+  </script>
+
+ </body>
+
+</html>
+<script  src="./script.js"></script>
+</body>
+</html>
