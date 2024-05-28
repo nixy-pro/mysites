@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Copying Texts in Clipboard || Learningrobo</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+      <style>
+         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+         * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Poppins', sans-serif;
+         }
+         ::selection {
+           color: #fff;
+           background: #187bcd;
+         }
+         textarea {
+           width: 400px; /* Ukuran absolut */
+           height: 200px; /* Ukuran absolut */
+           padding: 20px;
+           font-size: 17px;
+           text-align: justify;
+           color: #fff;
+           background: #12192c;
+           border-radius: 10px;
+           border: 4px solid #187bcd;
+         }
+         textarea:focus {
+           outline-color: #16a085;
+           border: 5px solid #16a085;
+         }
+         .btn {
+           margin: 5px 0 40px 0;
+         }
+         .btn button {
+           padding: 9px 15px;
+           font-size: 17px;
+           text-transform: uppercase;
+           font-weight: 500;
+           background: #187bcd;
+           border: none;
+           color: #f2f2f2;
+           cursor: pointer;
+           letter-spacing: 1px;
+           border-radius: 5px;
+           outline: none;
+         }
+         .btn .tooltip {
+           position: relative;
+           margin-left: -10px;
+           font-size: 17px;
+           font-weight: 500;
+           color: #f2f2f2;
+           z-index: 10;
+           background: #187bcd;
+           padding: 5px 10px;
+           border-radius: 3px;
+           text-transform: uppercase;
+           letter-spacing: 1px;
+           opacity: 0;
+           pointer-events: none;
+           transition: opacity 0.4s, margin-left 0.4s;
+         }
+         .btn .tooltip.show {
+           margin-left: 10px;
+           opacity: 1;
+           pointer-events: auto;
+         }
+         .tooltip:before {
+           content: '';
+           position: absolute;
+           height: 15px;
+           width: 15px;
+           background: #187bcd;
+           top: 50%;
+           left: -5px;
+           z-index: -1;
+           transform: translateY(-50%) rotate(45deg);
+         }
+         ::-webkit-scrollbar {
+           width: 5px;
+         }
+         .credit a {
+           text-decoration: none;
+           font-weight: 800;
+           color: #12192c;
+         }
+         .credit {
+           text-align: center;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           color: #000;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <textarea id="copyText" cols="60" rows="5">TEXT</textarea>
+         <br />
+         <div class="btn">
+            <button><i class="far fa-copy copyIcon fa-lg"></i> Copy</button><span class="tooltip">Done</span>
+         </div>
+         <textarea cols="60" id="pasteText" placeholder="Untuk cek apakah udah di copy, Silahkan tempel disini..." rows="5"></textarea>
+      </div>      
+      <script type="text/javascript">
+         const copyText = document.querySelector("#copyText");
+         const pasteText = document.querySelector("#pasteText");
+         const button = document.querySelector("button");
+         const tooltip = document.querySelector(".tooltip");
+         button.addEventListener('click', function() {
+           copyText.select();
+           pasteText.value = "";
+           tooltip.classList.add("show");
+           setTimeout(function() {
+             tooltip.classList.remove("show");
+           }, 700);
+           if (document.execCommand("copy")) {
+             pasteText.focus();
+           } else {
+             alert("Something went wrong!");
+           }
+         });
+      </script>
+   </body>
+</html>
